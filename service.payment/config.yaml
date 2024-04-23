@@ -1,8 +1,0 @@
-version: 1.0.0
-postgresql:
-  user: postgres
-  password: password
-  name: order
-  port: 5443
-  sslmode: disable
-  host: localhost
