@@ -5,9 +5,9 @@ import (
 	"testing"
 
 	"github.com/labstack/echo/v4"
-	errors "github.com/smiletrl/gateway/pkg/error"
 	"github.com/stretchr/testify/assert"
 
+	errors "github.com/smiletrl/gateway/pkg/error"
 	"github.com/smiletrl/gateway/pkg/logger"
 	"github.com/smiletrl/gateway/pkg/test"
 )
