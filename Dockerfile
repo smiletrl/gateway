@@ -3,7 +3,7 @@ FROM golang:1.22.2-alpine3.19 as builder
 RUN go env -w GO111MODULE=on
 
 # For china proxy
-RUN go env -w GOPROXY=https://goproxy.cn,direct
+# RUN go env -w GOPROXY=https://goproxy.cn,direct
 
 WORKDIR /build
 
