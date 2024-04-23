@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  # This will host a local postgres version which can be accessible through
+  # localhost or 127.0.0.1
+  postgres:
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: dt
+    image: "postgres:13.1"
+    command: postgres -c 'max_connections=200'
+    ports:
+      - "5443:5432"
