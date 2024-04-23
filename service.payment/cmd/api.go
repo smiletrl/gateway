@@ -10,6 +10,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/smiletrl/gateway/pkg/core"
 	errors "github.com/smiletrl/gateway/pkg/error"
+	"github.com/smiletrl/gateway/pkg/logger"
 	payment "github.com/smiletrl/gateway/service.payment/internal/payment"
 )
 
@@ -42,15 +43,17 @@ func main() {
 	}()
 
 	// gracefully shutdown application
-	shutdown(e)
+	shutdown(e, p.Logger)
 }
 
-func shutdown(e *echo.Echo) {
+func shutdown(e *echo.Echo, log logger.Provider) {
 	// Handle SIGTERM
 	ch := make(chan os.Signal, 1)
 	signal.Notify(ch, syscall.SIGINT, syscall.SIGTERM)
 
 	// block until a signal is received
 	<-ch
-	e.Shutdown(context.Background())
+	if err := e.Shutdown(context.Background()); err != nil {
+		log.Errorf("error shutdown: %w", err)
+	}
 }
