@@ -6,7 +6,6 @@ import (
 )
 
 // core provider for other providers, such as database//jwt/logger provider.
-// for this project, we only use logger provider.
 type Provider struct {
 	Access accesslog.Provider
 	Logger logger.Provider
