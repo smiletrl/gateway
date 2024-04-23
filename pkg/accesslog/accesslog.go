@@ -141,7 +141,7 @@ func (p provider) Middleware() echo.MiddlewareFunc {
 func extractContextFields(c context.Context) []interface{} {
 	// constants.RequestBody -- if this is image request, the length could be too large
 	// @todo There could be other keys, such as user id, staff id, etc
-	keys := []string{constant.RequestID}
+	keys := []constant.ContextString{constant.RequestID}
 	keyVals := make([]interface{}, 0, len(keys)*2)
 
 	for _, key := range keys {

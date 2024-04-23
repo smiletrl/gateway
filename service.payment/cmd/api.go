@@ -47,10 +47,10 @@ func main() {
 
 func shutdown(e *echo.Echo) {
 	// Handle SIGTERM
-	ch := make(chan os.Signal)
+	ch := make(chan os.Signal, 1)
 	signal.Notify(ch, syscall.SIGINT, syscall.SIGTERM)
-	select {
-	case <-ch:
-		e.Shutdown(context.Background())
-	}
+
+	// block until a signal is received
+	<-ch
+	e.Shutdown(context.Background())
 }

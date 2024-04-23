@@ -5,3 +5,6 @@ app:
 test:
 	- go clean -testcache
 	- go test -race ./...
+# code check
+staticcheck:
+	- staticcheck ./...
