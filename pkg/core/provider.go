@@ -5,7 +5,7 @@ import (
 	"github.com/smiletrl/gateway/pkg/logger"
 )
 
-// core provider for other providers, such as database//jwt/logger provider.
+// core provider for other providers, such as database/jwt/logger provider.
 type Provider struct {
 	Access accesslog.Provider
 	Logger logger.Provider
