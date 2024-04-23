@@ -33,7 +33,7 @@ type APITestCase struct {
 	ExpectResponse string
 }
 
-// Endpoint tests an HTTP endpoint using the given AuthAPITestCase spec.
+// Endpoint tests an HTTP endpoint using the given APITestCase spec.
 func Endpoint(t *testing.T, e *echo.Echo, tc APITestCase) (ActualResponse string) {
 	var res *httptest.ResponseRecorder
 	t.Run(tc.Name, func(t *testing.T) {
