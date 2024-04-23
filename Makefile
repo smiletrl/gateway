@@ -9,3 +9,6 @@ test:
 lintcheck:
 	- golangci-lint run ./...
 	- staticcheck ./...
+# docker
+docker:
+	docker-compose up
