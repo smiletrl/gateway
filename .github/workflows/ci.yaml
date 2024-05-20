@@ -18,7 +18,7 @@ jobs:
       - name: staticcheck
         uses: dominikh/staticcheck-action@v1
         with:
-          version: v1.3.1
+          version: 2023.1.7
           working-directory: go
       - name: Build-Payment
         run: cd go/service.payment/cmd && go build -v ./...
