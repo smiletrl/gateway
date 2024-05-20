@@ -14,10 +14,12 @@ jobs:
         uses: golangci/golangci-lint-action@v4
         with:
           version: v1.57.2
+          working-directory: go
       - name: staticcheck
         uses: dominikh/staticcheck-action@v1
         with:
-          version: "latest"
+          version: v1.3.1
+          working-directory: go
       - name: Build-Payment
         run: cd go/service.payment/cmd && go build -v ./...
       - name: Test
