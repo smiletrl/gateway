@@ -1,4 +1,3 @@
-import time
 from repository import Repository
 from model import *
 
