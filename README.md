@@ -10,7 +10,7 @@ Each language has a `Dockerfile`, `docker-compose.yml` available to deploy the a
 
 Here're the frameworks used in this repo:
 
-- [Go Eacho](https://github.com/labstack/echo)
+- [Go Echo](https://github.com/labstack/echo)
 - [Python FastAPI](https://github.com/tiangolo/fastapi)
 
 # todo
