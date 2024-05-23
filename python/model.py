@@ -45,7 +45,8 @@ class Transaction(BaseModel):
         # amount validate
         try:
             amount = float(self.amount)
-            if amount != round(amount, 2):
-                raise ValueError("decimal wrong")
         except ValueError:
             raise ValueError("amount should be in format 12.89")
+
+        if amount != round(amount, 2):
+            raise ValueError("amount decimal should be two")

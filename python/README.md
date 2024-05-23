@@ -6,6 +6,12 @@ Start with command
  fastapi dev api.py
 ```
 
+# Run test
+
+```
+python model_test.py
+```
+
 # Test cases
 
 Once app is up, run curl command to test
