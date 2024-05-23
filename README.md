@@ -4,6 +4,8 @@ It provides rest API endpoint development practices I have taken for Go, Python 
 
 The overall idea is to use resource/service/respository layers, and dependency injection to build rest apis, making code maintainable, and easier for test.
 
+Tests in this repo include unit test, end to end test (test api endpoint directly).
+
 Each language has a `Dockerfile`, `docker-compose.yml` available to deploy the app as a docker container.
 
 # Frameworks
