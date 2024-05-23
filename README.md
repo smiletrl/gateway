@@ -2,7 +2,7 @@
 
 It provides rest API endpoint development practices I have taken for Go, Python and Rust.
 
-The overall idea is to separate api request to different layers, making code maintainable, and easy for test.
+The overall idea is to use resource/service/respository layers, and dependency injection to build rest apis, making code maintainable, and easier for test.
 
 Each language has a `Dockerfile`, `docker-compose.yml` available to deploy the app as a docker container.
 
