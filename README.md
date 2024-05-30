@@ -17,5 +17,4 @@ Here're the frameworks used in this repo:
 
 # todo
 
-- add python test
 - add Rust
